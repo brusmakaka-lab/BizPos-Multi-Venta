@@ -186,7 +186,7 @@ Este es un proyecto privado. Para cambios mayores, crear un branch feature y sol
 
 ## 📄 Licencia
 
-Propietario - Todos los derechos reservados
+Bruno Jakubowski - Todos los derechos reservados
 
 ---
 
