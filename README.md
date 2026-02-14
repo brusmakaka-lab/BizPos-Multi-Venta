@@ -14,6 +14,7 @@ Sistema de punto de venta (POS) offline-first para Windows, desarrollado en Flut
 - ✅ **Backups**: Sistema automático de respaldo
 - ✅ **6 Rubros**: Kiosko, Clothing, Mini E-commerce, Library, Restaurant, Other
 - ✅ **Logo del negocio**: Personalización en tickets
+- ✅ **Pagos múltiples**: Efectivo, Débito, Crédito, QR, Transferencia
 
 ## 🏗️ Arquitectura
 
@@ -53,6 +54,7 @@ lib/
 │   ├── cash/                # Caja y turnos
 │   ├── dashboard/           # Dashboard y reportes
 │   ├── customers/           # Gestión de clientes
+│   ├── reports/            # Reportes avanzados
 │   └── settings/            # Configuración
 │
 └── shared/                   # Componentes compartidos
@@ -128,7 +130,7 @@ flutter build windows --release
 "C:\Program Files\Inno Setup 6\ISCC.exe" windows/installer/bizpos-installer.iss
 ```
 
-## ✅ Estado de Implementación (v1.5.0)
+## ✅ Estado de Implementación (v1.6.0)
 
 ### Fase 1: Fundación
 - [x] Setup del proyecto
@@ -156,21 +158,17 @@ flutter build windows --release
 - [x] Sistema de backups completo
 - [x] Empaquetado e instalador
 
-## 📝 Cambios en v1.5.0
+## 📝 Cambios en v1.6.0
 
-### Nuevas Funcionalidades
-- **Logo del negocio**: Selector de imagen en onboarding
-- **6 Rubros con categorías específicas**: Personalización por tipo de negocio
-- **Router simplificado**: Login directo si ya hay usuarios
-- **Stock Adjustment en Products Page**: Acceso más fácil
-- **Instalador Inno Setup**: Distribución simplificada
+### Correcciones
+- **Archivo pos_page.dart**: Reconstruido y corregido el código duplicado
+- **Botones de pago rápido**: Funcionalidad corregida ($500, $1000, $2000, etc.)
+- **Sincronización POS**: Los productos se actualizan automáticamente en tiempo real
+- **Ajuste de stock**: Botón guardar funciona correctamente
 
 ### Mejoras
-- Ajustes de stock con motivos
-- Anulación total o parcial de ventas
-- Pagos múltiples por venta
-- Descuentos por producto o global
-- Impuestos discriminados en tickets
+- Código optimizado y limpio
+- Mejora en la gestión de estado entre módulos
 
 ## 📝 Notas de Desarrollo
 
@@ -186,9 +184,9 @@ Este es un proyecto privado. Para cambios mayores, crear un branch feature y sol
 
 ## 📄 Licencia
 
-Bruno Jakubowski - Todos los derechos reservados
+Propietario - Todos los derechos reservados
 
 ---
 
-**Versión**: 1.5.0  
-**Última actualización**: 2026-02-13
+**Versión**: 1.6.0  
+**Última actualización**: 2026-02-14
